@@ -1,0 +1,8 @@
+<h1>Cocktails#show</h1>
+
+<%= @cocktail.name %>
+
+<% @doses.each do |dose| %>
+<%= dose.description %>
+<%= Ingredient.find(dose.ingredient_id).name %>
+<% end %>
